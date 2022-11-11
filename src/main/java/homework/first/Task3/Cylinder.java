@@ -49,7 +49,7 @@ public class Cylinder implements Shape {
     }
 
     private void calculateCylinderVolume() {
-        volume = Math.PI * Math.pow(2, this.radius) * this.high;
+        volume = Math.PI * Math.pow(radius,2) * high;
     }
 
     @Override
