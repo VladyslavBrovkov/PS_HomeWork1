@@ -26,6 +26,9 @@ public class Cube implements Shape {
 
 
     public void setSideLength(double sideLength) {
+        if (sideLength <= 0){
+            throw new IllegalArgumentException("Cube sideLength must be positive");
+        }
         this.sideLength = sideLength;
         calculateCubeVolume();
     }

@@ -29,11 +29,17 @@ public class Cylinder implements Shape {
     }
 
     public void setHigh(double high) {
+        if (high <= 0) {
+            throw new IllegalArgumentException("High must be positive");
+        }
         this.high = high;
         calculateCylinderVolume();
     }
 
     public void setRadius(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be positive");
+        }
         this.radius = radius;
         calculateCylinderVolume();
     }
